@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import axios from "axios";
 import TextField from "@material-ui/core/TextField";
-
+import forms from "../Css/forms.css"
+import { Typography } from "@material-ui/core";
+import Grid from '@material-ui/core/Grid';
+import about1 from '../media/about1.jpg';
 export default class Contact extends Component {
   state = {
     name: "",
@@ -72,7 +75,19 @@ export default class Contact extends Component {
   };
   render() {
     return (
-      <form className="contact-form" onSubmit={(e) => this.formSubmit(e)}>
+      <div className="row1">
+<Typography><h1>Contact Us</h1> </Typography>
+
+<Grid container>
+     <Grid item xs={6}> 
+     <Typography><h4>Need to get in touch with us?Either fill out the form
+with your inquiry or find the department email you'd
+like to contact below.</h4></Typography>
+<img src={about1} className='banner2'  alt="about1" />
+     </Grid>
+     <Grid item xs={6}>
+
+     <form className="contact-form" onSubmit={(e) => this.formSubmit(e)}>
       <TextField
         id="standard-multiline-flexible"
         label="Message"
@@ -135,6 +150,16 @@ export default class Contact extends Component {
         </button>
       </div>
     </form>
+
+
+     </Grid>
+</Grid>
+
+
+
+
+      
+    </div>
     );
   }
 }

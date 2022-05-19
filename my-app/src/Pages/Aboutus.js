@@ -3,7 +3,7 @@ import about1 from '../media/about1.jpg';
 import omar from '../media/omar.jpg';
 import hasan from '../media/hasan.jpg';
 import Box from '@mui/material/Box';
-import Grid from '@material-ui/core/Grid'
+import Grid from '@material-ui/core/Grid';
 import { Typography } from '@material-ui/core';
 
 function aboutus() {
@@ -17,8 +17,11 @@ function aboutus() {
       <br></br>
       <br></br>
       <br></br>
+<div className='row1'>
+
       <Grid container>
      <Grid item xs={6}> 
+     <Typography ><h1 >About Us</h1></Typography>
         <Typography ><h3 className='middle'>Job seeker refers to an individual who is actively looking for an employment opportunity/job and has submitted an application to the employer.</h3></Typography>
      </Grid>
      <Grid item xs={6}>
@@ -41,7 +44,7 @@ function aboutus() {
      <Grid item xs={3}>
      </Grid>
 </Grid>
-
+</div>
 
 </div>
       
