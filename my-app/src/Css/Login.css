@@ -1,0 +1,20 @@
+
+
+div.wrapper{
+
+overflow: hidden;
+display: flex;
+flex-direction: column;
+Justify-content: center;
+align-items: center;
+padding: 20px;
+}
+.error-msg{
+    font-size: 12px;
+    width: 100%;
+    color:red;
+  
+}
+.errorbox{
+    border:1px solid red;
+}
