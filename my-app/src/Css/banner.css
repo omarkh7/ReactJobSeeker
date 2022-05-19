@@ -3,34 +3,31 @@
     width: 100%;
 }
 .banner2{
-    width:100%;
+    width:600px;
+    height:400px ;
 }
 
 .middle{
-    display: block;
-    margin: 0 auto;
-    width: 100%;
+  
+    margin-top: 150px;
+   
   
    
 }
 .row{
-    padding-top:50px;
+   
     padding-bottom:50px;
     text-align: center;
     justify-content: center;
 }
-.carttable{
-  
-padding-left:70px;
-padding-right:70px;
+
+.team1{
+    border-radius: 50%;
+  width:70%;
+}
+.team2{
+    border-radius: 50%;
+    width:70%;
 }
 
 
-.image1{
-width:800px;
-height:700px;
-}
-
-.productimg{
-width: 100%;
-}
