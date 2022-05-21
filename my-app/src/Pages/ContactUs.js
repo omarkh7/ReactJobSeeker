@@ -2,9 +2,11 @@ import React, { Component } from "react";
 import axios from "axios";
 import TextField from "@material-ui/core/TextField";
 import forms from "../Css/forms.css"
-import { Typography } from "@material-ui/core";
+import { Button, Paper, Typography } from "@material-ui/core";
 import Grid from '@material-ui/core/Grid';
-import about1 from '../media/about1.jpg';
+import { ToastContainer,toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 export default class Contact extends Component {
   state = {
     name: "",
@@ -55,10 +57,8 @@ export default class Contact extends Component {
 
   formSubmit = async (e) => {
     e.preventDefault();
-    this.setState({
-      buttonText: "...sending",
-    });
-
+    
+    toast.success("Email Sent will get back to you shortly",3000)
     let data = {
       name: this.state.name,
       email: this.state.email,
@@ -67,7 +67,6 @@ export default class Contact extends Component {
     };
 
     try {
-      await axios.post("BACKEND_URL", data);
       this.setState({ sent: true }, this.resetForm());
     } catch (error) {
       console.log(error);
@@ -83,10 +82,10 @@ export default class Contact extends Component {
      <Typography><h4>Need to get in touch with us?Either fill out the form
 with your inquiry or find the department email you'd
 like to contact below.</h4></Typography>
-<img src={about1} className='banner2'  alt="about1" />
+<img src={"media/about1.jpg"} className='banner2'  alt="about1" />
      </Grid>
      <Grid item xs={6}>
-
+     <Paper elevation={4} style={{width:"40%",margin:"auto",marginTop:"2em",padding:"2em"}}>
      <form className="contact-form" onSubmit={(e) => this.formSubmit(e)}>
       <TextField
         id="standard-multiline-flexible"
@@ -145,12 +144,10 @@ like to contact below.</h4></Typography>
       <br />
       <br />
       <div className="button--container">
-        <button type="submit" className="button button-primary">
-          {this.state.buttonText}
-        </button>
+        <Button type="submit" color="primary" variant="contained"> {this.state.buttonText}</Button>
       </div>
     </form>
-
+</Paper>
 
      </Grid>
 </Grid>
@@ -158,7 +155,7 @@ like to contact below.</h4></Typography>
 
 
 
-      
+      <ToastContainer/>
     </div>
     );
   }

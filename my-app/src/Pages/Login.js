@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import React, { useState } from 'react';
+import { Navigate } from 'react-router-dom';
 
 
 function Login() {
@@ -30,11 +31,11 @@ function Login() {
   const handleFormsubmit = (e) => {
     e.preventDefault();
 
-    if (Email === 'omar' && password === 'khankan') {
-      alert('Login succefully')
+    if (Email === 'omar@email.com' && password === 'khankan') {
+    window.location.pathname="Admin"
     }
     else {
-      if (Email !== 'omar') {
+      if (Email !== 'omar@email.com') {
         setEmailError('wrong Email');
       }
       else {
@@ -68,7 +69,7 @@ function Login() {
         <br></br>
 
 
-        <div><TextField id="outlined-basic" label="Password" onChange={handlePasswordChange} onError='red' value={password} placeholder="Enter password " /></div>
+        <div><TextField id="outlined-basic" label="Password" type="password" onChange={handlePasswordChange} onError='red' value={password} placeholder="Enter password " /></div>
 
         {passwordError && <div className='error-msg'>{passwordError}
         </div>}

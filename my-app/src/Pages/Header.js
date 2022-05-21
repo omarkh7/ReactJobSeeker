@@ -1,5 +1,4 @@
 import * as React from 'react';
-import logo from  '../media/JobSeekers.png';
 import '../Css/logo.css';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -53,7 +52,7 @@ const ResponsiveAppBar = () => {
             component="div"
             sx={{ mr: 16, display: { xs: 'none', md: 'flex' } }}
           >
-           <img src={logo } className="logo-accuv" alt="logo" />
+           <img src={"media/JobSeekers.png" } className="logo-accuv" alt="logo" />
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -105,7 +104,7 @@ const ResponsiveAppBar = () => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
           >
-           <img src={logo } className="logo-accuv" alt="logo" />
+           <img src={"media/JobSeekers.png" } className="logo-accuv" alt="logo" />
           </Typography>
           <Box sx={{ flexGrow: 12, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
