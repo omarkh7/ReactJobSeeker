@@ -52,7 +52,7 @@ const ResponsiveAppBar = () => {
             component="div"
             sx={{ mr: 16, display: { xs: 'none', md: 'flex' } }}
           >
-           <img src={"media/JobSeekers.png" } className="logo-accuv" alt="logo" />
+           <img src={"media/JobSeekers.png" } className="logo" alt="logo" />
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -104,7 +104,7 @@ const ResponsiveAppBar = () => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
           >
-           <img src={"media/JobSeekers.png" } className="logo-accuv" alt="logo" />
+           <img src={"media/JobSeekers.png" } className="logo" alt="logo" />
           </Typography>
           <Box sx={{ flexGrow: 12, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (

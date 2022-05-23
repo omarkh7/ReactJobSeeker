@@ -6,7 +6,9 @@ import { Button, Paper, Typography } from "@material-ui/core";
 import Grid from '@material-ui/core/Grid';
 import { ToastContainer,toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import ContactPhoneOutlinedIcon from '@mui/icons-material/ContactPhoneOutlined';
+import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 export default class Contact extends Component {
   state = {
     name: "",
@@ -82,6 +84,35 @@ export default class Contact extends Component {
      <Typography><h4>Need to get in touch with us?Either fill out the form
 with your inquiry or find the department email you'd
 like to contact below.</h4></Typography>
+<div>
+<Grid container sx={{ color: "text.primary" }} >
+<Grid item xs={1}>
+        <HomeOutlinedIcon />
+      </Grid>
+      <Grid item xs={4}>
+        <Typography>Address: Beirut, Lebanon</Typography>
+      </Grid>
+    </Grid>
+
+    <Grid container sx={{ color: "text.primary" }} >
+<Grid item xs={1}>
+        <ContactPhoneOutlinedIcon />
+      </Grid>
+      <Grid item xs={5}>
+        <Typography>Phonenumber: +961123123</Typography>
+      </Grid>
+    </Grid>
+    <Grid container sx={{ color: "text.primary" }} >
+<Grid item xs={1}>
+        <EmailOutlinedIcon />
+      </Grid>
+      <Grid item xs={5}>
+        <Typography>Email: info@jobseekers.com</Typography>
+      </Grid>
+    </Grid>
+    
+    </div>
+    <br></br>
 <img src={"media/about1.jpg"} className='banner2'  alt="about1" />
      </Grid>
      <Grid item xs={6}>
@@ -89,8 +120,8 @@ like to contact below.</h4></Typography>
      <form className="contact-form" onSubmit={(e) => this.formSubmit(e)}>
       <TextField
         id="standard-multiline-flexible"
-        label="Message"
-        placeholder="Enter Message"
+        label="Subject"
+        placeholder="Enter Subject"
         variant="outlined"
         multiline
         rowsMax={4}
@@ -133,8 +164,8 @@ like to contact below.</h4></Typography>
       <br />
       <TextField
         id="outlined-basic"
-        placeholder="Enter Subject"
-        label="Subject"
+        placeholder="Enter Message"
+        label="Message"
         variant="outlined"
         value={this.state.subject}
         onChange={(e) => this.setState({ subject: e.target.value })}

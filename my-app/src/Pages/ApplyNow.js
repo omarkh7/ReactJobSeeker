@@ -24,7 +24,11 @@ function ApplyNow() {
 
     return (
       <div >
-        <ApplicationForm cardOptions={cardOptions}/>
+        <ApplicationForm cardOptions={cardOptions} />
+        <br>
+        </br>
+        <br></br>
+        <br></br>
   </div>
     );
   }
